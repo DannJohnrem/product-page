@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Vue Mastery</title>
+  <title>Sock store</title>
   <!-- Import Styles -->
   <link rel="stylesheet" href="./assets/styles.css" />
   <!-- Import Vue.js -->
@@ -21,6 +21,16 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">almost sold out</p>
+            <p v-else>Out of Stock</p>
+            <ul>
+              <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+            <ul>
+              <li v-for="(size, index) in sizes" v-bind:key="index">{{ size }}</li>
+            </ul>
+            <div v-for="varient in varients" v-bind:key="varient.id">{{ varient.color }}</div>
           </div>
         </div>
       </div>
