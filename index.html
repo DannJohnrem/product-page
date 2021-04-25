@@ -13,8 +13,8 @@
 <body>
   <div id="app">
     <div class="nav-bar">
-      <div class="cart">Cart({{ cart }})</div>
-      <product-display></product-display>
+      <div class="cart">Cart({{ cart.length }})</div>
+      <product-display v-bind:premium="premium" v-on:add-to-cart="updateCart"></product-display>
     </div>
   </div>
 
@@ -23,7 +23,9 @@
 
    <!-- Import Component -->
    <script src="./components/ProductDisplay.js"></script>
-
+   <script src="./components/ReviewForm.js"></script>
+   <script src="./components/ReviewList.js"></script>
+   
   <!-- Mount app -->
   <script>
     const mountedApp = app.mount('#app')
