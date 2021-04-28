@@ -38,7 +38,7 @@ app.component('product-display', {
         return {
             product: 'Socks',
             selectedVariant: 0,
-            brand: 'Vue Mastery',
+            brand: 'Happy Feet',
             details: ['50% cotton', '30% wool', '20% polyester'],
             // sizes: ['S', 'M', 'L', 'XL'],
             variants: [{
@@ -69,6 +69,7 @@ app.component('product-display', {
         },
         updateVariant(index) {
             this.selectedVariant = index
+            console.log(index)
         }, 
         addReview(review) {
             this.reviews.push(review)
