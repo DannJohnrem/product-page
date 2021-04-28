@@ -43,16 +43,22 @@ app.component('product-display', {
             // sizes: ['S', 'M', 'L', 'XL'],
             variants: [{
                     id: 2234,
-                    color: '#288F5A',
-                    image: './assets/images/socks_green.jpg',
+                    color: '#D0B534',
+                    image: './assets/images/socks_yellow.jpg',
                     quantity: 50
                 },
                 {
                     id: 2235,
-                    color: '#40546E',
-                    image: './assets/images/socks_blue.jpg',
+                    color: '#ADA29C',
+                    image: './assets/images/socks_gray.jpg',
                     quantity: 0
                 },
+                {
+                    id: 2236,
+                    color: '#8B3E83',
+                    image: './assets/images/socks_purple.jpg',
+                    quantity: 50
+                }
             ],
             reviews: []
         }
